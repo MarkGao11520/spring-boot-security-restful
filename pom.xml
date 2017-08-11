@@ -58,7 +58,14 @@
 			<artifactId>jjwt</artifactId>
 			<version>0.6.0</version>
 		</dependency>
-	</dependencies>
+
+		<!--阿里 FastJson依赖-->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.22</version>
+		</dependency>
+    </dependencies>
 
 	<build>
 		<plugins>

@@ -63,12 +63,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 ).permitAll()
                 .anyRequest().fullyAuthenticated()
                 .and()
-                .formLogin()
-                .successHandler(new RestAuthenticationSuccessHandler())
-                .failureHandler(new SimpleUrlAuthenticationFailureHandler())
-                .and()
                 .exceptionHandling()
-                .authenticationEntryPoint(new RestAuthenticationEntryPoint());
+                .authenticationEntryPoint(new RestAuthenticationEntryPoint())
+                ;
         http
                 .addFilterBefore(authenticationTokenFilterBean(), UsernamePasswordAuthenticationFilter.class);
         http
